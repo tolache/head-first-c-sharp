@@ -1,0 +1,26 @@
+﻿<Page x:Class="StarryNight.View.BeesOnAStarryNight"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:StarryNight.View"
+      xmlns:viewmodel="clr-namespace:StarryNight.ViewModel"
+      mc:Ignorable="d"
+      Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={local:RatioConverter}, ConverterParameter='0.9' }" 
+      Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={local:RatioConverter}, ConverterParameter='0.9' }"  >
+    <Page.Resources>
+        <viewmodel:BeeStarViewModel x:Key="beeStarViewModel"/>
+    </Page.Resources>
+    
+    <Grid>
+        <ItemsControl DataContext="{StaticResource beeStarViewModel}"
+                      ItemsSource="{Binding Sprites}"
+                      Margin="10,0,10,10">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas Background="Blue" SizeChanged="Canvas_OnSizeChanged"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>
+</Page>

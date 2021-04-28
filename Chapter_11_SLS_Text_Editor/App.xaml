@@ -1,0 +1,19 @@
+﻿<Application
+    x:Class="Chapter_11_SLS_Text_Editor.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chapter_11_SLS_Text_Editor">
+
+    <Application.Resources>
+        <Style x:Key="OpenFileAppBarButtonStyle" TargetType="Button">
+            <Setter Property="AutomationProperties.AutomationId" Value="OpenFileAppBarButton"/>
+            <Setter Property="AutomationProperties.Name" Value="Open File"/>
+            <Setter Property="Content" Value="Open"/>
+        </Style>
+        <Style x:Key="SaveAppBarButtonStyle" TargetType="Button">
+            <Setter Property="AutomationProperties.AutomationId" Value="OpenFileAppBarButton"/>
+            <Setter Property="AutomationProperties.Name" Value="Save File"/>
+            <Setter Property="Content" Value="Save"/>
+        </Style>
+    </Application.Resources>
+</Application>

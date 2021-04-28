@@ -1,0 +1,55 @@
+﻿
+
+<Page
+    x:Class="Chapter_11_Excuse_Manager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chapter_11_Excuse_Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="652" d:DesignWidth="1074">
+    
+    <Page.Resources>
+        <local:ExcuseManager x:Name="excuseManager"/>
+        
+        <Style x:Key="MySubheader" TargetType="TextBlock" BasedOn="{StaticResource SubheaderTextBlockStyle}">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+        <Style x:Key="MyTextBox" TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,20,20"/>
+        </Style>
+    </Page.Resources>
+    
+    <Page.BottomAppBar>
+        <AppBar x:Name="appBar">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <AppBarButton Icon="Add" Label="New Excuse" Click="NewExcuseButton_OnClick"/>
+                <AppBarButton Icon="Folder" Label="Folder" Click="FolderButton_OnClick"/>
+                <AppBarButton Icon="Refresh" Label="Random Excuse"  x:Name="randomButton"
+                              IsEnabled="False" Click="RandomExcuseButton_OnClick"/>
+                <AppBarButton Icon="OpenFile" Label="Open" Click="OpenButton_OnClick"/>
+                <AppBarButton Icon="Save" Label="Save" x:Name="saveButton"
+                              IsEnabled="False" Click="SaveButton_OnClick"/>
+                <AppBarButton Icon="Save" Label="Save as..." Click="SaveAsButton_OnClick"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+    
+    <Grid>
+        <StackPanel Margin="20,0,0,0" DataContext="{StaticResource ResourceKey=excuseManager}">
+            <TextBlock Text="Excuse" Style="{StaticResource MySubheader}"/>
+            <TextBox Text="{Binding CurrentExcuse.Description, Mode=TwoWay}" Style="{StaticResource MyTextBox}"/>
+            <TextBlock Text="Results" Style="{StaticResource MySubheader}"/>
+            <TextBox Text="{Binding CurrentExcuse.Results, Mode=TwoWay}" Style="{StaticResource MyTextBox}"/>
+            <TextBlock Text="Last Used" Style="{StaticResource MySubheader}"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBox Text="{Binding CurrentExcuse.LastUsed, Mode=TwoWay}" MinWidth="300" Margin="0,0,20,0"/>
+                <Button Name="SetToCurrentTime" Content="Set to current time" Click="SetToCurrentTime_OnClick" Margin="0,0,20,0"/>
+                <TextBlock Text="{Binding CurrentExcuse.DateWarning}" Style="{StaticResource SubtitleTextBlockStyle}" Foreground="Red"/>
+            </StackPanel>
+            <TextBlock Text="File Date" Style="{StaticResource MySubheader}"/>
+            <TextBlock Text="{Binding FileDate}"/>
+        </StackPanel>
+    </Grid>
+</Page>

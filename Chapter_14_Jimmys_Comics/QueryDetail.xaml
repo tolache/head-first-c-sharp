@@ -1,0 +1,36 @@
+﻿<Page x:Class="Chapter_14_Jimmys_Comics.QueryDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Chapter_14_Jimmys_Comics"
+      mc:Ignorable="d"
+      Title="Query Detail" Height="600" Width="Auto"
+      Loaded="QueryDetail_OnLoaded"
+      Unloaded="QueryDetail_OnUnloaded">
+    <Page.Resources>
+        <local:ComicQueryManager x:Key="comicQueryManager"/>
+    </Page.Resources>
+    
+    <Grid Margin="10,0" DataContext="{StaticResource comicQueryManager}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock x:Name="resultsHeader" Text="Query results" Margin="10,0,0,20"/>
+        <ListView Grid.Row="1" Margin="0,-10,0,0" ItemsSource="{Binding CurrentQueryResults}" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image}" Margin="0,0,20,0" Stretch="UniformToFill" Width="25" Height="25"
+                               VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>    
+</Page>

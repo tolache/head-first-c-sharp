@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Remove="Assets\bluegray_250x250.jpg" />
+	<None Remove="Assets\Captain Amazing Issue 19 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 36 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 57 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 6 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 68 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 74 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 83 cover.png" />
+	<None Remove="Assets\Captain Amazing Issue 97 cover.png" />
+	<None Remove="Assets\captain_amazing_250x250.jpg" />
+	<None Remove="Assets\captain_amazing_zoom_250x250.jpg" />
+	<None Remove="Assets\purple_250x250.jpg" />
+	
+	<Resource Include="Assets\bluegray_250x250.jpg" />
+	<Resource Include="Assets\Captain Amazing Issue 19 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 36 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 57 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 6 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 68 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 74 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 83 cover.png" />
+	<Resource Include="Assets\Captain Amazing Issue 97 cover.png" />
+	<Resource Include="Assets\captain_amazing_250x250.jpg" />
+	<Resource Include="Assets\captain_amazing_zoom_250x250.jpg" />
+	<Resource Include="Assets\purple_250x250.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MainPage.xaml">
+      <Generator></Generator>
+    </Page>
+    <Page Update="QueryDetail.xaml">
+      <Generator></Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="QueryDetail.xaml.cs">
+      <DependentUpon>QueryDetail.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

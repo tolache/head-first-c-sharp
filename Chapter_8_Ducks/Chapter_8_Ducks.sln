@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_8_Ducks", "Chapter_8_Ducks.csproj", "{963F5D6B-FB12-4B61-9ABE-BD2A06985FE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{963F5D6B-FB12-4B61-9ABE-BD2A06985FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963F5D6B-FB12-4B61-9ABE-BD2A06985FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963F5D6B-FB12-4B61-9ABE-BD2A06985FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963F5D6B-FB12-4B61-9ABE-BD2A06985FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C103C96D-4037-44FB-9610-38FBE440AA8E}
+	EndGlobalSection
+EndGlobal

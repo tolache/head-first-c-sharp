@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter_9_Excuse_Manager", "Chapter_9_Excuse_Manager.csproj", "{EC3182E4-FCE0-4BC3-9091-7E72084746F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC3182E4-FCE0-4BC3-9091-7E72084746F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3182E4-FCE0-4BC3-9091-7E72084746F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3182E4-FCE0-4BC3-9091-7E72084746F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3182E4-FCE0-4BC3-9091-7E72084746F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

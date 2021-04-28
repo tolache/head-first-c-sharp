@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="Chapter_11_Are_You_Happy.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chapter_11_Are_You_Happy">
+
+</Application>

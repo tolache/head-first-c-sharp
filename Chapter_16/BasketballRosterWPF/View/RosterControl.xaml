@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BasketballRosterWPF.View.RosterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BasketballRosterWPF.View"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate x:Key="PlayerItemTemplate">
+            <TextBlock>
+                <Run Text="{Binding Mode=OneWay, Path=Name}"/>
+                <Run Text=" #"/>
+                <Run Text="{Binding Mode=OneWay, Path=Number}"/>
+            </TextBlock>
+        </DataTemplate>
+        <Style x:Key="ListView" TargetType="ListView">
+            <Setter Property="ItemTemplate" Value="{StaticResource PlayerItemTemplate}"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+        </Style>
+        <Style x:Key="Header" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="Subheader" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Border BorderBrush="CornflowerBlue" BorderThickness="1" CornerRadius="6" Margin="10">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="{Binding TeamName}" Style="{StaticResource Header}"/>
+                <TextBlock Text="Starting Players" Style="{StaticResource Subheader}"/>
+                <ListView Name="StartersListView" Style="{StaticResource ListView}"
+                          ItemsSource="{Binding Starters}"
+                          SelectionChanged="StartersListView_OnSelectionChanged"/>
+                <TextBlock Text="Bench Players" Style="{StaticResource Subheader}"/>
+                <ListView Name="BenchListView" Style="{StaticResource ListView}" 
+                          ItemsSource="{Binding Bench}" 
+                          SelectionChanged="BenchListView_OnSelectionChanged"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

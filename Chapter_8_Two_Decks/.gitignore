@@ -1,0 +1,8 @@
+bin/
+obj/
+/packages/
+/.idea/.idea.Chapter_8_Two_Decks/.idea
+/.idea/.gitignore
+/.vs/Chapter_8_Two_Decks/v16/Server/sqlite3
+/.vs/Chapter_8_Two_Decks/v16
+/.idea/.idea.Chapter_8_Two_Decks
